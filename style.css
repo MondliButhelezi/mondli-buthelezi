@@ -8,7 +8,7 @@ a {
     color: #64ffda;
 }
 
-/* Pinned left column on mobile */
+/* Mobile view */
 @media (max-width: 768px) {
     .pinned {
         position: fixed;
@@ -25,6 +25,7 @@ a {
         padding-left: 6rem;
     }
 
+    /* Show the pinned menu when toggled */
     .pinned.show {
         transform: translateX(0);
     }
@@ -39,6 +40,13 @@ a {
         z-index: 101;
     }
 
+
+    .logo {
+        height: auto;
+        width: 48px; /* Adjust this width if needed */
+        object-fit: contain; /* Ensures aspect ratio is maintained */
+    }
+
     .mobile-nav button {
         background: none;
         border: none;
@@ -47,6 +55,7 @@ a {
 
     .content {
         margin-top: 60px;
+        padding: 20px;
     }
 }
 
