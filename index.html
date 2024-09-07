@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondli Buthelezi | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+
+        a {
+            color: #64ffda;
+        }
+
+        /* Pinned left column on mobile */
+        @media (max-width: 768px) {
+            .pinned {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 60%;
+                height: 100%;
+                background-color: rgba(10, 25, 47, 0.95);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+                z-index: 100;
+                padding: 20px;
+                overflow-y: auto;
+                padding-left: 6rem;
+            }
+
+            .pinned.show {
+                transform: translateX(0);
+            }
+
+            .mobile-nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: #0a192f;
+                width: 100%;
+                z-index: 101;
+            }
+
+            .mobile-nav button {
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .content {
+                margin-top: 60px;
+            }
+        }
+
+        /* Desktop view */
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        background-color: #0a192f;
+        padding: 20px;
+        padding-left: 6rem;
+    }
+
+    .content {
+        margin-left: 22%; /* Move content slightly more to the right */
+        margin-right: 2%; /* Add margin on the right side */
+        width: 76%; /* Adjust width to account for added margins */
+        overflow-y: auto;
+        padding: 20px;
+        padding-right: 6rem;
+    }
+}
+
+
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <h1 class="text-3xl font-bold">Mondli Buthelezi</h1>
+        <button id="menu-toggle">
+            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Left Pinned Column (mobile & desktop) -->
+    <div id="pinned-nav" class="pinned desktop-nav">
+        <h1 class="text-4xl font-bold">Mondli Buthelezi</h1>
+        <p class="text-xl mt-2 mb-10">Data Analyst, GIS Developer, and Python Developer</p>
+        <nav class="space-y-4">
+            <a href="#about" class="block text-lg menu-link">About</a>
+            <a href="#skills" class="block text-lg menu-link">Skills</a>
+            <a href="#experience" class="block text-lg menu-link">Experience</a>
+            <a href="#projects" class="block text-lg menu-link">Projects</a>
+            <a href="#contact" class="block text-lg menu-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Right Scrollable Content -->
+    <div class="content">
+        <!-- Hero Section -->
+        <section class="text-center py-20">
+            <h2 class="text-5xl font-bold">Hi, I'm Mondli Buthelezi</h2>
+            <p class="text-xl mt-4">Data Analyst, GIS Developer, and Python Developer</p>
+            <a href="#projects"
+                class="mt-8 inline-block bg-transparent border-2 border-teal-400 text-teal-400 px-6 py-2 rounded-lg hover:bg-teal-400 hover:text-white transition duration-300">View
+                My Work</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-10">
+            <h2 class="text-4xl font-bold mb-6">About Me</h2>
+            <p class="text-lg leading-relaxed">
+                I am a passionate Data Analyst and GIS Developer with extensive experience in database management,
+                spatial analysis, and developing web mapping applications. My expertise spans across various programming
+                languages and platforms, and I have a strong background in geospatial data systems.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-gray-900 py-20 px-10">
+            <h2 class="text-4xl font-bold mb-6">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold">Programming Languages</h3>
+                    <ul class="mt-2">
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>Python, C#, Java</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Libraries & Frameworks</h3>
+                    <ul class="mt-2">
+                        <li>PostGres, Unity 3D</li>
+                        <li>JDBC, MySQL, Apache Spark</li>
+                        <li>MS SQL, AWS</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Tools & Platforms</h3>
+                    <ul class="mt-2">
+                        <li>Google Earth Engine, GitHub</li>
+                        <li>PgAdmin, GeoNode</li>
+                        <li>Django, Looker Studio, Power BI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-10">
+            <h2 class="text-4xl font-bold mb-6">Experience</h2>
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-2xl font-semibold">Database Administrator</h3>
+                    <p class="text-sm text-teal-400">Digby Wells Environmental, NOV 2023 - PRESENT</p>
+                    <p class="mt-2">Maintaining GIS and related data, developing web mapping applications, and improving
+                        database performance.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold">GIS Developer Intern</h3>
+                    <p class="text-sm text-teal-400">Kartoza, MAY 2023 - SEPTEMBER 2023</p>
+                    <p class="mt-2">Building projects using QGIS, PostGIS, and GeoNode, with coding in SQL, Python, and
+                        JavaScript.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-900 py-20 px-10">
+            <h2 class="text-4xl font-bold mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold">Web Mapping Application</h3>
+                    <p class="mt-2">A web mapping application developed using ArcGIS, QGIS, and Django.</p>
+                    <a href="#" class="text-teal-400 mt-4 block">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-10">
+            <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+            <p class="text-lg leading-relaxed">Feel free to reach out to me via email at <a
+                    href="mailto:vuyanimondlibuthelezi@gmail.com">vuyanimondlibuthelezi@gmail.com</a> or connect with me
+                on <a href="https://www.linkedin.com/in/mondli-buthelezi" target="_blank">LinkedIn</a>.
+            </p>
+        </section>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const pinnedNav = document.getElementById('pinned-nav');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        menuToggle.addEventListener('click', () => {
+            pinnedNav.classList.toggle('show');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                pinnedNav.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
