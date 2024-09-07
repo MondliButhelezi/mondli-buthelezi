@@ -14,10 +14,9 @@
 <body class="antialiased">
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
-        <h1 class="text-3xl font-bold">Mondli Buthelezi</h1>
+        <img src="images/mondli-logo.png" alt="Mondli Logo" class="logo">
         <button id="menu-toggle">
-            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
+            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
@@ -25,9 +24,8 @@
 
     <!-- Left Pinned Column (mobile & desktop) -->
     <div id="pinned-nav" class="pinned desktop-nav">
-        <h1 class="text-4xl font-bold">Mondli Buthelezi</h1>
-        <p class="text-xl mt-2 mb-10">Data Analyst, GIS Developer, and Python Developer</p>
         <nav class="space-y-4">
+            <img src="images/mondli-logo.png" alt="Mondli Logo" class="logo">
             <a href="#about" class="block text-lg menu-link">About</a>
             <a href="#skills" class="block text-lg menu-link">Skills</a>
             <a href="#experience" class="block text-lg menu-link">Experience</a>
@@ -54,6 +52,14 @@
                 Currently based in Johannesburg, South Africa, I am pursuing an MSc in GIS & Remote Sensing from the University of the Witwatersrand. I have worked across multiple roles, including Database Administrator, Researcher, and Junior Java Developer, where I have honed my skills in programming, geospatial analysis, and data-driven decision-making.
             </p>
         </section>
+
+        <!-- Resume Download Button -->
+    <section id="resume" class="py-20 px-10 text-center">
+        <a href="Mondli-Buthelezi-CV-2024.pdf" download="Mondli-Buthelezi-Resume.pdf"
+        class="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-purple-700 hover:via-pink-600 hover:to-red-600 transition duration-300">
+        Download My Resume
+        </a>
+    </section>
 
         <!-- Skills Section -->
         <section id="skills" class="bg-gray-900 py-20 px-10">
@@ -133,17 +139,6 @@
                         <li>Managing different operating systems in the lab</li>
                     </ul>
                 </div>
-
-                <div class="bg-gray-800 p-6 rounded-lg">
-                    <h3 class="text-xl font-semibold">Project CodeX, Cape Town - Junior Java Developer</h3>
-                    <p class="mt-2">FEB 2021 - NOV 2022</p>
-                    <ul class="mt-2 space-y-2">
-                        <li>Developing and maintaining Java-based applications</li>
-                        <li>Testing and debugging applications</li>
-                        <li>Participating in all stages of the development lifecycle</li>
-                        <li>Documenting code and conducting code reviews</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
@@ -165,3 +160,11 @@
             <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
             <p class="text-lg leading-relaxed">Feel free to reach out via email at <a href="mailto:vuyanimondlibuthelezi@gmail.com">vuyanimondlibuthelezi@gmail.com</a></p>
             <p class="text-lg leading-relaxed">You can also find me on <a href="https://www.linkedin.com/in/vuyani-mondli-buthelezi-597">linkedin</a></p>
+        </section>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
