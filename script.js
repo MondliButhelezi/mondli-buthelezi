@@ -14,7 +14,7 @@ menuLinks.forEach(link => {
     });
 });
 
-
+// Fade-in animations using IntersectionObserver
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in');
 
@@ -30,4 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(element => {
         observer.observe(element);
     });
+});
+
+// Hide the loader when the page is fully loaded
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.add('hidden');
+    }
 });

@@ -21,11 +21,10 @@ a {
         transition: transform 0.3s ease-in-out;
         z-index: 100;
         padding: 20px;
-        overflow-y: auto;
         padding-left: 6rem;
+        overflow-y: auto;
     }
 
-    /* Show the pinned menu when toggled */
     .pinned.show {
         transform: translateX(0);
     }
@@ -40,11 +39,10 @@ a {
         z-index: 101;
     }
 
-
     .logo {
+        width: 48px;
         height: auto;
-        width: 48px; /* Adjust this width if needed */
-        object-fit: contain; /* Ensures aspect ratio is maintained */
+        object-fit: contain;
     }
 
     .mobile-nav button {
@@ -100,10 +98,51 @@ a {
 }
 
 .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
     animation: fadeIn 1.5s ease-out forwards;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-/* You can adjust this for different sections */
 .fade-in-delay {
-    animation-delay: 0.5s; /* Adds delay to the animation */
+    animation-delay: 0.5s;
+}
+
+/* CSS for loading animation */
+/* Loading spinner container */
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a192f;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spinner animation */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #64ffda;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hide the loader when content is loaded */
+.hidden {
+    display: none;
 }
